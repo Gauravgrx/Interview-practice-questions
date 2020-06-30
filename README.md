@@ -3,8 +3,7 @@ collection of all type of interview questions
 
 1) Array-
 i)Find the duplicate in an array of N integers.
-// C++ code to find
-// duplicates in O(n) time
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -32,9 +31,9 @@ return 0;
 }
 
 
+
 ii) Sort an array of 0's 1's 2's without using extra space or sorting algo.
 
-// C++ implementation of the approach
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -103,3 +102,42 @@ int main()
 
 	return 0;
 }
+
+
+
+3)Find Repeating and Missing element in an array.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printTwoElements(int arr[], int size)
+{
+	int i;
+	cout << "The repeating element is/are ";
+
+	for (i = 0; i < size; i++) {
+		if (arr[abs(arr[i]) - 1] > 0)
+			arr[abs(arr[i]) - 1] = -arr[abs(arr[i]) - 1];
+		else
+			cout << abs(arr[i]) << " ";
+	}
+
+	cout <<endl<< "missing element is/are ";
+	for (i = 0; i < size; i++) {
+		if (arr[i] > 0)
+			cout << (i + 1)<<" ";
+	}
+}
+
+/* Driver code */
+int main()
+{
+    int n,i;
+    cin>>n;
+	int arr[n];
+	for(i=0;i<n;i++){
+        cin>>arr[i];
+	}
+	printTwoElements(arr, n);
+}
+
