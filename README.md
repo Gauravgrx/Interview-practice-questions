@@ -290,10 +290,7 @@ int main()
 } 
 
 vii) Inversion of array(using merge sort)
-
-// C++ program to Count 
-// Inversions in an array 
-// using Merge Sort 
+ 
 #include <bits/stdc++.h> 
 using namespace std; 
 
