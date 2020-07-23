@@ -488,5 +488,37 @@ int main()
 } 
 
 
+2) MATHS
+
+i) Excel column number
+ 
+#include <bits/stdc++.h> 
+
+using namespace std; 
+
+// Returns result when we pass title. 
+int titleToNumber(string s) 
+{ 
+	// This process is similar to 
+	// binary-to-decimal conversion 
+	int result = 0; 
+	for (const auto& c : s) 
+	{ 
+		result *= 26; 
+		result += c - 'A' + 1; 
+	} 
+
+	return result; 
+} 
+
+int main() 
+{
+    string s;
+    cin>>s;
+	cout << titleToNumber(s) << endl; 
+	return 0; 
+} 
+
+
 
 
