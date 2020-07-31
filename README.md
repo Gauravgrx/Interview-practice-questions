@@ -519,6 +519,38 @@ int main()
 	return 0; 
 } 
 
+ii) x^n in O(logn)
+
+#include<iostream> 
+using namespace std; 
+class gfg 
+{ 
+	
+/* Function to calculate x raised to the power n */
+public: 
+int power(int x, unsigned int n) 
+{ 
+	int temp; 
+	if( n == 0) 
+		return 1; 
+	temp = power(x, n/2); 
+	if (n%2 == 0) 
+		return temp*temp; 
+	else
+		return x*temp*temp; 
+} 
+};
+
+int main() 
+{ 
+	gfg g; 
+	int x; 
+	unsigned int n; 
+	cin>>x>>n;
+	cout << g.power(x, n); 
+	return 0; 
+} 
+
 
 
 
